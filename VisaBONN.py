@@ -46,6 +46,18 @@ class VisaBONN(object):
         else:
             return 'error order'
 
+    def PABandSwitch(self, freq):
+        """switch the Band to select the correct frequency"""
+        if freq < 1:
+            self.PABand(1)
+        elif 1 <= freq < 2:
+            self.PABand(2)
+        elif 2 <= freq < 6:
+            self.PABand(3)
+        elif 6 <= freq < 18:
+            self.PABand(4)
+
+
 if __name__ == '__main__':
     import visa
     # check

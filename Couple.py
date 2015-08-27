@@ -42,7 +42,7 @@ def cal_field(freq, fieldintensity):
     for i in range(1, 12):
         antennadata.append(hornsheet.col_values(i)[1:11])
     # antenna index
-    antennaname = antennadata[0][0]
+    antennaname = int(antennadata[0][0])
     p_in = 1  # 端口的射频功率
     # confirm the antenna with suitable frequency
     if freq < 0.96 or freq > 18:
