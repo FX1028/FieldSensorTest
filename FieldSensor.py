@@ -34,11 +34,14 @@ class FieldSensor(Visa8257D, VisaBONN, VisaNRP, EasyDatabase):
         frequency = freq * 1000000000
         print(self.PMSetFreq(frequency))
 #        self.SGCWFrec(frequency)
-        sg_initial = -30
-        self.SGPowerSet(sg_initial)  # set the initial power unit dBm
+        for i in range(0, 5):  # iterate the power output
+            if i == 0:
+                sg_initial = -30
+                self.SGPowerSet(sg_initial)   # set the initial power unit dBm
+                self.SGpowerOut('On')
+                powercouple = self.PMFetch()
 
 
-        print(self.PMFetch())
         return field
 
 
