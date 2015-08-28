@@ -1,11 +1,15 @@
 __author__ = 'TheJoker'
+import visa
 
 
 class Visa8257D(object):
     def __init__(self, sgaddr, resourcemanager):
         self.SG8257Range = [-115, 25]
         self.rm = resourcemanager
-        self.SG8257 = self.rm.open_resource(sgaddr)
+        try:
+            self.SG8257 = self.rm.open_resource(sgaddr)
+        except visa.Error:
+            raise Exception('InstrumentInitialError ')
         self.SGWrite('*RST')
 
     def SGState(self):

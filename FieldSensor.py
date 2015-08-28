@@ -21,7 +21,7 @@ class FieldSensor(Visa8257D, VisaBONN, VisaNRP, EasyDatabase):
         self.fieldintensityRange = [0, 100]
 
     def FieldProd(self, freq, fieldintensity):
-        # Produce the fieldintensity of specified frequency
+        """Produce the fieldintensity of specified frequency"""
         sg_output_limit = -5  # unit is dBm set the signal generator output limit
         field = cal_field(freq, fieldintensity)
         # p_meter_disp_dbm, coupler, antenna, e_cal_1w
@@ -39,6 +39,11 @@ class FieldSensor(Visa8257D, VisaBONN, VisaNRP, EasyDatabase):
                 self.SGpowerOut('On')
                 powercouple = self.PMFetch()
                 powerdiff = powertarget - powercouple
+                powersg = sg_initial + powerdiff
+                if self.SGInRange(powersg) and powersg < -5:
+                    pass
+                else:
+                    return 'Error input signal generator power'
 
 
         return field

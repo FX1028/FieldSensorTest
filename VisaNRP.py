@@ -32,6 +32,12 @@ class VisaNRP(object):
     def PMClose(self):
         self.PM.close()
 
+    def PMInRange(self, power):
+        if self.NRPRange[0] <= power <= self.NRPRange[1]:
+            return True
+        else:
+            return False
+
     def PMCal(self):
         """Calibrate and zero the power sensor"""
         zerocommand = 'CALibration:ZERO:AUTO ONCE'

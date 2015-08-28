@@ -34,6 +34,7 @@
       <w>datacouple</w>
       <w>dbname</w>
       <w>devicename</w>
+      <w>diag</w>
       <w>disp</w>
       <w>eastwidth</w>
       <w>encn</w>
@@ -68,7 +69,10 @@
       <w>outp</w>
       <w>paaddr</w>
       <w>pabonn</w>
+      <w>powercouple</w>
+      <w>powerdiff</w>
       <w>powerratio</w>
+      <w>powersg</w>
       <w>powertarget</w>
       <w>printreport</w>
       <w>psaddr</w>
