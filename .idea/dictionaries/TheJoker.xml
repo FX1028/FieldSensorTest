@@ -69,6 +69,7 @@
       <w>paaddr</w>
       <w>pabonn</w>
       <w>powerratio</w>
+      <w>powertarget</w>
       <w>printreport</w>
       <w>psaddr</w>
       <w>ptest</w>

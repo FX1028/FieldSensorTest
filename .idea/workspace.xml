@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="837dee23-a198-456a-b1e6-337a1ff462e1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FieldSensor.py" afterPath="$PROJECT_DIR$/FieldSensor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/TheJoker.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/TheJoker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Visa8257D.py" afterPath="$PROJECT_DIR$/Visa8257D.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VisaNRP.py" afterPath="$PROJECT_DIR$/VisaNRP.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FieldSensorTest.iws" />
@@ -55,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/VisaNRP.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
@@ -63,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FieldSensor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FieldSensor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FieldSensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3312101">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="e#25#56#0" expanded="true" />
               </folding>
@@ -149,11 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Visa8257D.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Visa8257D.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Visa8257D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.36305732">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -222,7 +226,6 @@
         <option value="$PROJECT_DIR$/EasyBONN.py" />
         <option value="$PROJECT_DIR$/VisaController.py" />
         <option value="$PROJECT_DIR$/E_field_cal2015/xls.py" />
-        <option value="$PROJECT_DIR$/Visa8257D.py" />
         <option value="$PROJECT_DIR$/EasyAccess.py" />
         <option value="$PROJECT_DIR$/temp/EasyAccess.py" />
         <option value="$PROJECT_DIR$/filetools.py" />
@@ -233,6 +236,7 @@
         <option value="$PROJECT_DIR$/VisaBONN.py" />
         <option value="$PROJECT_DIR$/VisaNRP.py" />
         <option value="$PROJECT_DIR$/FieldSensor.py" />
+        <option value="$PROJECT_DIR$/Visa8257D.py" />
       </list>
     </option>
   </component>
@@ -640,7 +644,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440728668062</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2015-8-27&#10;&#10;Nothing serious&#10;">
+      <created>1440730228753</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1440730228753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1150,18 +1160,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Visa8257D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VisaNRP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
           </folding>
@@ -1170,11 +1172,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FieldSensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3312101">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#25#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Visa8257D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36305732">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

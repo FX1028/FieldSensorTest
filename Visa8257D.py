@@ -3,6 +3,7 @@ __author__ = 'TheJoker'
 
 class Visa8257D(object):
     def __init__(self, sgaddr, resourcemanager):
+        self.SG8257Range = [-115, 25]
         self.rm = resourcemanager
         self.SG8257 = self.rm.open_resource(sgaddr)
         self.SGWrite('*RST')
@@ -26,6 +27,12 @@ class Visa8257D(object):
 
     def SGClose(self):
         self.SG8257.close()
+
+    def SGInRange(self, power):
+        if self.SG8257Range[0] <= power <= self.SG8257Range[1]:
+            return True
+        else:
+            return False
 
     def SGRef(self, order="INT"):
         """The order command is reference oscillator source: INT (internal) or EXT(external) and return the status"""

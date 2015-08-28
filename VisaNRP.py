@@ -6,6 +6,7 @@ from math import log10
 
 class VisaNRP(object):
     def __init__(self, nrpaddr, resourcemanager):
+        self.NRPRange = [-67, 23]
         self.rm = resourcemanager
         self.PM = self.rm.open_resource(nrpaddr)
         self.value = -85
