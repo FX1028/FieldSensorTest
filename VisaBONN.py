@@ -28,7 +28,19 @@ class VisaBONN(object):
     def PAClose(self):
         self.PABONN.close()
 
-    def PABand(self, bandnum):
+    def PABand(self, freq):
+        """according the frequency set the band number"""
+        freq /= 1000000000
+        if freq <= 1:
+            bandnum = 1
+        elif 1 < freq <= 2:
+            bandnum = 2
+        elif 2 < freq <= 6:
+            bandnum = 3
+        elif 6 < freq <= 18:
+            bandnum = 4
+        else:
+            return 'wrong frequency set'
         if bandnum in range(1, 5):
             band = 'SW01_' + str(bandnum)
             self.PAWrite(band)
@@ -37,7 +49,7 @@ class VisaBONN(object):
         else:
             return 'error order'
 
-    def PAPowerOut(self, order):
+    def PAPowerOut(self, order='OFF'):
         """set the RF ON or OFF, default setting is OFF, if wrong order as input will return 'error order'"""
         if order is 'ON' or 'OFF':
             self.PAWrite('AMP_' + order)
@@ -45,17 +57,6 @@ class VisaBONN(object):
             return 'SG power status: ' + order
         else:
             return 'error order'
-
-    def PABandSwitch(self, freq):
-        """switch the Band to select the correct frequency"""
-        if freq < 1:
-            self.PABand(1)
-        elif 1 <= freq < 2:
-            self.PABand(2)
-        elif 2 <= freq < 6:
-            self.PABand(3)
-        elif 6 <= freq < 18:
-            self.PABand(4)
 
 
 if __name__ == '__main__':

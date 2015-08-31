@@ -44,9 +44,8 @@ class Visa8257D(object):
         else:
             return 'error order'
 
-    def SGCWFrec(self, freq=5):
+    def SGCWFrec(self, freq=5000000000):
         """Freq is just frequency number, set the frequency and return the frequency number"""
-        freq *= 1000000000
         if freq in range(100000, 31800000000):
             freqcommand = ':FREQ'
             freqwrite = freqcommand + ' ' + str(freq)

@@ -115,7 +115,7 @@ def cal_field(freq, fieldintensity):
     power_ratio_antenna2pm_db = interp(freq, freq_coupler, powerratio_db_coupler)  # yi = interp1(x,Y,xi)
     print(power_ratio_antenna2pm_db)
     pin_ambition = pow(fieldintensity * d, 2) / (30 * gain_near * factor_input)
-    pin_ambition_dbm = log10(pin_ambition) + 30
+    pin_ambition_dbm = 10 * log10(pin_ambition) + 30
     p_meter_disp_dbm = pin_ambition_dbm - power_ratio_antenna2pm_db  # 功率计上显示的功率值
 
     result = [p_meter_disp_dbm, coupler, antenna, e_cal_1w]
@@ -123,4 +123,4 @@ def cal_field(freq, fieldintensity):
 
 
 if __name__ == '__main__':
-    print(cal_field(0.96, 30))
+    print(cal_field(2, 20))
