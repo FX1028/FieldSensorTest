@@ -43,8 +43,9 @@ class VisaNRP(object):
         zerocommand = 'CALibration:ZERO:AUTO ONCE'
         self.PMWrite(zerocommand)
 
-    def PMSetFreq(self, freq=500000000):
+    def PMSetFreq(self, freq=5):
         """Freq is just frequency number, set the frequency and return the frequency number"""
+        freq *= 1000000000
         freqcommand = 'SENSe:FREQuency'
         freqwrite = freqcommand + ' ' + str(freq)
         freqquery = freqcommand + '?'

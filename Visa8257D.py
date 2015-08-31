@@ -6,10 +6,7 @@ class Visa8257D(object):
     def __init__(self, sgaddr, resourcemanager):
         self.SG8257Range = [-115, 25]
         self.rm = resourcemanager
-        try:
-            self.SG8257 = self.rm.open_resource(sgaddr)
-        except visa.Error:
-            raise Exception('InstrumentInitialError ')
+        self.SG8257 = self.rm.open_resource(sgaddr)
         self.SGWrite('*RST')
 
     def SGState(self):
@@ -47,8 +44,9 @@ class Visa8257D(object):
         else:
             return 'error order'
 
-    def SGCWFrec(self, freq=500000000):
+    def SGCWFrec(self, freq=5):
         """Freq is just frequency number, set the frequency and return the frequency number"""
+        freq *= 1000000000
         if freq in range(100000, 31800000000):
             freqcommand = ':FREQ'
             freqwrite = freqcommand + ' ' + str(freq)
