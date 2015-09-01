@@ -92,15 +92,12 @@ def cal_field(freq, fieldintensity):
     # 以下进行功率计监控部分的处理   'A'代表0.8G-4.2G的耦合器，而'B'代表2G~18G的耦合器（带20dB衰减器）
     if freq > 4.2:
         coupler = 'B'
-        print('请替换为B号耦合器')
 
     elif freq <= 2:
         coupler = 'A'
-        print('请替换为A号耦合器')
 
     else:
         coupler = 'Wrong coupler'
-        print('耦合器选择错误')
 
     coupler_using = couple_a
     if coupler == 'A':  # 选择耦合器的数据
@@ -113,7 +110,6 @@ def cal_field(freq, fieldintensity):
     powerratio_db_coupler = coupler_using[5]  # 功率比值，dB
     freq *= pow(10, 9)
     power_ratio_antenna2pm_db = interp(freq, freq_coupler, powerratio_db_coupler)  # yi = interp1(x,Y,xi)
-    print(power_ratio_antenna2pm_db)
     pin_ambition = pow(fieldintensity * d, 2) / (30 * gain_near * factor_input)
     pin_ambition_dbm = 10 * log10(pin_ambition) + 30
     p_meter_disp_dbm = pin_ambition_dbm - power_ratio_antenna2pm_db  # 功率计上显示的功率值
@@ -123,4 +119,4 @@ def cal_field(freq, fieldintensity):
 
 
 if __name__ == '__main__':
-    print(cal_field(2, 20))
+    print(cal_field(18, 30))

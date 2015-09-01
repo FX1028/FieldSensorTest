@@ -44,6 +44,35 @@ class VisaController(object):
             waittime += 0.5
         return rolldone
 
+    def CTAntennaRoll(self, antenna):
+        """180: 02     90: 04       270: 03     360: 01"""
+        if antenna == 'ETS3160-0316001':
+            angel = self.CTReadAngel()
+            if angel >= 180:
+                self.CTRoll(360)
+            else:
+                self.CTRoll(0)
+        elif antenna == 'ETS3160-0316002':
+            self.CTRoll(180)
+        elif antenna == 'ETS3160-0316003':
+            self.CTRoll(270)
+        else:
+            self.CTRoll(90)
+
+    def CTAntennaChange(self, antenna):
+        """90: 02     0: 04       180: 03     270: 01"""
+        if antenna == 'ETS3160-0316003':
+            angel = self.CTReadAngel()
+            if angel >= 180:
+                self.CTRoll(360)
+            else:
+                self.CTRoll(0)
+        elif antenna == 'ETS3160-0316004':
+            self.CTRoll(180)
+        elif antenna == 'ETS3160-0316001':
+            self.CTRoll(90)
+        else:
+            self.CTRoll(270)
 
 if __name__ == '__main__':
     import visa

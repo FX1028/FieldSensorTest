@@ -31,9 +31,9 @@ class VisaBONN(object):
     def PABand(self, freq):
         """according the frequency set the band number"""
         freq /= 1000000000
-        if freq <= 1:
+        if freq < 1:
             bandnum = 1
-        elif 1 < freq <= 2:
+        elif 1 <= freq <= 2:
             bandnum = 2
         elif 2 < freq <= 6:
             bandnum = 3
